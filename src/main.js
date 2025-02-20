@@ -9,12 +9,13 @@ import { TonConnectUIPlugin } from '@townsquarelabs/ui-vue';
 const app = createApp(App);
 // const prod = isProd();
 const prod = true;
+const host = location.origin;
 const config = {
-  manifestUrl:  location.origin + (prod ? "/tonconnect-manifest.json" : "/tonconnect-manifest_test_2.json"),
+  manifestUrl:  host + (prod ? "/tonconnect-manifest.json" : "/tonconnect-manifest_test_2.json"),
   name: 'To',
-  iconUrl: location.origin+'/logo.png',
-  termsOfUseUrl: location.origin+"/terms-of-use.txt",
-  privacyPolicyUrl: location.origin+"/privace.txt"
+  iconUrl: host+'/logo.png',
+  termsOfUseUrl: host+"/terms-of-use.txt",
+  privacyPolicyUrl: host+"/privace.txt"
 };
 console.log('config', config);
 app.use(TonConnectUIPlugin, config);

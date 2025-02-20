@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Hanyiyahei';
+  /* 自定義字體名稱 */
+  src: url('./font/Hanyiyahei.ttf') format('woff2'),
+    /* 字體文件路徑 */
+    url('./font/Hanyiyahei.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {}
+
+*,
+:after,
+:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: rgb(248, 182, 41) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8,
+h9,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+i,
+em {
+  box-sizing: border-box;
+  font-style: normal;
+  outline: none;
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+  -webkit-appearance: button;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+input {
+  overflow: visible;
+  outline: none;
+  border: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+[role=button],
+a,
+area,
+button,
+input:not([type=range]),
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+html,
+body {
+  min-height: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  /* 防止在一些旧设备上产生奇怪的滚动行为 */
+}
+
+html {
+  height: -webkit-fill-available;
+  --antd-wave-shadow-color: #f8b629;
+  --scroll-bar: 0;
+  --antd-wave-border-color: var(--antd-wave-shadow-color);
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
+}
+
+body {
+  // margin: 0;
+  // font-size: 0.28rem;
+  // color: #333;
+  // height: 100vh;
+
+  font-variant: tabular-nums;
+  font-feature-settings: "tnum", "tnum";
+  font-family: PingFangSC-Regular, PingFang SC;
+  // background-color: transparent;
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+input {
+  color: #000;
+  background: transparent;
+}
+
+input::-webkit-input-placeholder {
+  color: #7B7B7B;
+}
+
+// 一些全局样式
+.van-toast__text {
+  word-break: break-word;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+// ::-webkit-scrollbar-track {
+
+//   box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+//   border-radius: 10px;
+//   background-color: #272d44;
+// }
+.scroll-container {
+  position: fixed;
+  width: 100vw;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* 隐藏滚动条（适用于部分浏览器） */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+  /* 隐藏滚动条（适用于WebKit 浏览器） */
+}
+
+::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+input {
+  caret-color: #fff;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+  /* 修改占位符文本的颜色 */
+}
+
+.overflow {
+  overflow: hidden; //超出的文本隐藏
+  text-overflow: ellipsis; //溢出用省略号显示
+  white-space: nowrap; //溢出不换行
+  margin-top: .32rem;
+  color: #fff;
+
+}
+
+.van-field__control {
+  color: #fff;
+}
+
+body {
+  margin: 0; 
+  padding: 0;
+  //   background-image: url('background.jpg'); /* 替换为你的背景图路径 */
+  background-image: url('./img/home_bg.png') !important;
+  background-size: cover !important;
+  height: 100vh;
+  overscroll-behavior: none !important;
+  scroll-behavior: auto !important;
+  overflow: hidden !important;
+}
+
